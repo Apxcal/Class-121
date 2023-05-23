@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <title>Case Study Project</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=    "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <ol>
+            <div class="imgandresult">
+                <li class="col-sm-4 col-xs-12">
+                <b>Test image - Mouse</b>
+                <img id="img" src="IMG_7884.JPG" class="img-responsive">
+                </li>
+                <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+                <span>Mouse</span>
+            </h5>
+                <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+                <span>Mouse</span>
+            </h5>
+            <div class="miniresult" class="col-xs-12">
+                <h4>Result - Tie</h4>
+                <hr>
+                <h4 id="result">Both are correct.</h4>
+            </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="imgandresult">
+                <li class="col-sm-4 col-xs-12">
+                <b>Test image - Ball</b>
+                <img id="img" src="IMG_7885.JPG" class="img-responsive">
+                </li>
+                <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+                <span>Ball</span>
+            </h5>
+                <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+                <span>Balloon</span>
+            </h5>
+            <div class="miniresult" class="col-xs-12">
+                <h4>Result - Ball</h4>
+                <hr>
+                <h4 id="result">Google Lens is more accurate.</h4>
+            </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="imgandresult">
+                <li class="col-sm-4 col-xs-12">
+                <b>Test image - Spoon</b>
+                <img id="img" src="IMG_7886.JPG" class="img-responsive">
+                </li>
+                <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+                <span>Spoon</span>
+            </h5>
+                <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+                <span>Vacuum, Vacuum Cleaner</span>
+            </h5>
+            <div class="miniresult" class="col-xs-12">
+                <h4>Result - Spoon</h4>
+                <hr>
+                <h4 id="result">Google Lens is more accurate.</h4>
+            </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="imgandresult">
+            <li class="col-sm-4 col-xs-12">
+            <b>Test image - Marker</b>
+            <img id="img" src="IMG_7887.JPG" class="img-responsive">
+            </li>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+            <span>Pen</span>
+        </h5>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+            <span>Ball point pen</span>
+        </h5>
+        <div class="miniresult" class="col-xs-12">
+            <h4>Result - Marker</h4>
+            <hr>
+            <h4 id="result">Google Lens is more accurate.</h4>
+        </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="imgandresult">
+            <li class="col-sm-4 col-xs-12">
+            <b>Test image - Calculator</b>
+            <img id="img" src="IMG_7888.JPG" class="img-responsive">
+            </li>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+            <span>Calculator</span>
+        </h5>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+            <span>Pay-phone, pay-station</span>
+        </h5>
+        <div class="miniresult" class="col-xs-12">
+            <h4>Result - Calculator</h4>
+            <hr>
+            <h4 id="result">Google Lens is more accurate.</h4>
+        </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="imgandresult">
+            <li class="col-sm-4 col-xs-12">
+            <b>Test image - Bottled Water</b>
+            <img id="img" src="IMG_7889.JPG" class="img-responsive">
+            </li>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+            <span>Bottled Water</span>
+        </h5>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+            <span>Water bottle</span>
+        </h5>
+        <div class="miniresult" class="col-xs-12">
+            <h4>Result - Bottled Water</h4>
+            <hr>
+            <h4 id="result">Both are correct.</h4>
+        </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="imgandresult">
+            <li class="col-sm-4 col-xs-12">
+            <b>Test image - Screwdriver</b>
+            <img id="img" src="IMG_7890.JPG" class="img-responsive">
+            </li>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+            <span>Screwdriver</span>
+        </h5>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+            <span>Vacuum, vacuum cleaner</span>
+        </h5>
+        <div class="miniresult" class="col-xs-12">
+            <h4>Result - Screwdriver</h4>
+            <hr>
+            <h4 id="result">Google Lens is more accurate.</h4>
+        </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="imgandresult">
+            <li class="col-sm-4 col-xs-12">
+            <b>Test image - Binder</b>
+            <img id="img" src="IMG_7891.JPG" class="img-responsive">
+            </li>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+            <span>Binder</span>
+        </h5>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+            <span>Television, television system</span>
+        </h5>
+        <div class="miniresult" class="col-xs-12">
+            <h4>Result - Binder</h4>
+            <hr>
+            <h4 id="result">Google Lens is more accurate.</h4>
+        </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="imgandresult">
+            <li class="col-sm-4 col-xs-12">
+            <b>Test image - Binder</b>
+            <img id="img" src="IMG_7892.JPG" class="img-responsive">
+            </li>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+            <span>Ruler</span>
+        </h5>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+            <span>Electric guitar</span>
+        </h5>
+        <div class="miniresult" class="col-xs-12">
+            <h4>Result - Ruler</h4>
+            <hr>
+            <h4 id="result">Google Lens is more accurate.</h4>
+        </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="imgandresult">
+            <li class="col-sm-4 col-xs-12">
+            <b>Test image - Pacifier</b>
+            <img id="img" src="IMG_7893.JPG" class="img-responsive">
+            </li>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>GOOGLE LENS:</b>
+            <span>Pacifier</span>
+        </h5>
+            <h5 class="col-sm-4 col-xs-12">Output on <b>MOBILENET MODEL:</b>
+            <span>Bubble</span>
+        </h5>
+        <div class="miniresult" class="col-xs-12">
+            <h4>Result - Pacifier</h4>
+            <hr>
+            <h4 id="result">Google Lens is more accurate.</h4>
+        </div>
+        </div>
+        </ol>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="btn btn-warning conclusion">
+            <p>I have tested ten objects.</p>
+            <br>
+            <p><b>Google Lens</b> have predicted eight of the more accurately.</p>
+            <br>
+            <p><b>MobileNet</b> was less accurate.</p>
+            <br>
+            <p>So according to my case study, <b>Google Lens is more accurate.</b></p>
+        </div>
+        <br><br><br><br><br>
+        <div id="footer">Developed by - Zavier</div>
+    </body>
+</html>
